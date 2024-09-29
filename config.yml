@@ -1,0 +1,72 @@
+---
+configure_dotfiles: true
+configure_terminal: false
+configure_osx: true
+
+# Set to 'true' to configure the Dock via dockutil.
+configure_dock: true
+dockitems_remove:
+- Launchpad
+- TV
+- Podcasts
+- 'App Store'
+dockitems_persist:
+- name: "iTerm"
+    path: "/Applications/iTerm.app/"
+    pos: 5
+
+
+dotfiles_repo: https://github.com/JoJoProgramsThings/dotfiles.git
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: ~/
+dotfiles_files:
+  - .zshrc
+  - .gitignore
+  - .inputrc
+  - .osx
+  - .vimrc
+
+homebrew_installed_packages:
+  - ansible
+  - bat
+  - cmake
+  - eza
+  - fd
+  - fzf
+  - oh-my-posh
+  - iperf3
+  - ollama
+  - ripgrep
+  - sshpass
+  - stow
+  - tree
+  - wget
+  - zinit
+  - zoxide
+  - zsh-you-should-use
+  - wget
+
+
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - bambu-studio
+  - barrier
+  - blender
+  - dp-browser-for-sqlite
+  - font-agave-nerd-font
+  - gimp
+  - git-credential-manager
+  - inkscape
+  - iterm2
+  - stats
+  - wireshark
+  - firefox
+
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps: []
+mas_email: ""
+mas_password: ""
+
+osx_script: "~/dotfiles/.osx --no-restart"
